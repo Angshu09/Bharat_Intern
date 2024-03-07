@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1{
+    font-size: 3rem;
+}
+
+body{
+    background-color: #131212;
+    color: #c6c2c2;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.flex{
+    display: flex;
+}
+
+.orange{
+    color: #d8a927;
+}
+
+.header-container{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.nav-container{
+    padding: 0 35px 0 15px;
+    height: 13%;
+}
+
+.nav-container nav{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container nav ul{
+    gap: 45px;
+    justify-content: center;
+    align-items: center;
+    transition:  0.5s ease-in-out;
+}
+
+.nav-container nav ul li{
+    list-style: none;
+}
+
+.nav-container nav ul li a{
+    text-decoration: none;
+    position: relative;
+    font-size: 16px;
+    font-weight: 550;
+    color: #c6c2c2;
+}
+
+.hamburger{
+    display: none;
+    font-size: 20px;
+}
+
+.cross{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    display: none;
+    font-size: 20px;
+}
+
+.nav-container ul li a::after{
+    background: #d8a927;
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.nav-container ul li a:hover::after{
+    width: 100%;
+}
+
+.signature{
+    width: 200px;
+}
+
+.hero-container{
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100% - 13%);
+    position: relative;
+
+}
+
+.hero-image{
+    height: 100%;
+}
+
+.hero-container img{
+   height: 100%;
+   position: absolute;
+   bottom: 0;
+   z-index: -10;
+}
+
+.hero-text{
+    padding-block-start: 70px;
+}
+
+
+.hero-text p{
+    font-size: 18px;
+}
+
+/* -------------About------------- */
+
+.about{
+    padding: 70px 0 35px;
+}
+
+.about-container{
+    justify-content: space-evenly;
+}
+
+.about-image{
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.about-image img{
+    width: 100%;
+    border-radius: 20px
+}
+
+.about-text{
+    flex-basis: 50%;
+}
+
+
+.about-text p{
+    font-size: 13px;
+}
+
+.about-tabs{
+    margin: 20px 0 25px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tabs{
+    font-weight: 550;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.tabs::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    background-color: #d8a927;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.tabs.active::after{
+    width: 100%;
+}
+
+.tabs-content ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.tabs-content{
+    display: none;
+    height: 160px;
+}
+
+.active-content{
+    display: block;
+}
+
+/* ----------------work-------------- */
+
+.work-container{
+    padding-inline: 55px;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 30px;
+}
+
+.work-list div{
+    background-color: rgb(43, 43, 43);
+    padding: 30px;
+    border-radius: 15px;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.work-list div i{
+    font-size: 40px;
+}
+
+.work-list div p{
+    font-size: 13px;
+    font-weight: 550;
+}
+
+.work-list div h2{
+    font-size: 1.6rem;
+}
+
+.work-list div p i{
+    font-size: unset;
+}
+
+.work-list div:hover{
+    background-color: #d8a927;
+    color: black ;
+    transform: translateY(-10px);
+}
+
+/* ----------------Project---------------- */
+
+.project{
+    padding: 60px 0;
+}
+
+.project-container{
+    padding: 0 55px;
+}
+
+.project-img{
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-img img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.project-description{
+    width: 100%;
+    padding: 25px 15px;
+    height: 230px;
+}
+
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card{
+    background-color: rgb(43, 43, 43);
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.project-card:hover{
+    transform: translateY(-10px);
+}
+
+.project-description p{
+    font-size: 12px;
+    font-weight: 550;
+    margin-top: 15px;
+}
+
+.project-button{
+    width: 100%;
+}
+
+.project-button a{
+    text-decoration: none;
+    background-color: #d8a927;
+    color: black;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.project-button a:hover{
+    background-color: #131212;
+    color: #d8a927;
+}
+
+/* ----------------Contact---------------- */
+
+.contact{
+    padding: 19px 55px;
+}
+
+.contact-container{
+    justify-content: space-between;
+}
+
+.connect-div{
+    flex-basis: 35%;
+}
+
+.connect-div a{
+    text-decoration: none;
+    color: #c6c2c2;
+}
+
+.social-media{
+    margin-top: 15px;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-icon{
+    font-size: 35px;
+}
+
+.leetcode{
+    height: 35px;
+}
+
+
+.form-div{
+    border: none;
+    flex-basis: 60%;
+    padding: 28px;
+    border-radius: 20px;
+    background-color: rgb(43, 43, 43);
+}
+
+.form-div input, textarea{
+    width: 100%;
+}
+
+.form{
+    flex-direction: column;
+    gap: 18px;
+    font-weight: 600;
+}
+
+
+.form input, textarea{
+    margin-top: 6px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: rgb(66, 66, 66);
+    color: #f4f2f2;
+}
+
+.form button{
+    text-decoration: none;
+    background-color: #d8a927;
+    color: black;
+    font-weight: 600;
+    padding: 12px 60px;
+    border: none;
+    border-radius: 7px;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.form button:hover{
+    background-color:#131212;
+    color: #d8a927;
+}
+
+/* ------------Copyrights-------- */
+
+.copyright{
+    margin-top: 30px;
+}
+
+.copyright-container{
+    background-color: rgb(43, 43, 43);
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 600;
+}
